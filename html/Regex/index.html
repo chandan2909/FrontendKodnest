@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex</title>
+  </head>
+  <body>
+    <!-- 
+    Regex or Regular Expression
+    It helps in form validation mostly at client side which known as client side validation.
+    Using pattern attribute used inside input tag used to write regex.
+"^" -- start of regex and end with "$"
+1. numbers -- start with /d or [0-9]
+2. Characters: 
+    only capital: [A-Z]
+    Only small: [a-z]
+    both caps and small : [A-Za-z]
+    
+For range like min and max char = {min, max} e.g. (a) {2, 50}: min- 5, max- 50  (b) {5}: only 5 character
+3. Title case 
+    (a) (first name): ^[A-Z]{1}[a-z]{1, 50}$
+    (b) first name and space then last name: "^[A-Z]{1}[a-z]{1,25} [A-Z]{1}[a-z]{1, 25}"
+
+
+    -->
+    <form action="">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" pattern="^[A-Za-z]{2,50}$" />
+      <br /><br />
+      <label for="phone1">Phone Number: in dash format: </label>
+      <input type="tel" name="phone1" id="phone1" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{4}$">
+      <br><br>
+      <label for="phone2">Phone Number start with 6789: </label>
+      <input type="tel" name="phone2" id="phone2" pattern="^[6-9]{1}-[0-9]{2}-[0-9]{3}-[0-9]{4}$">
+      <br><br>
+
+      <label for="phone3">Phone Number start with +91 [6789]: </label>
+      <input type="tel" name="phone3" id="phone3" pattern="^\91+ [6-9]{1}[0-9]{9}$"> <!-- or +[9]{1}[1]{1} [6-9]{1}[0-9]{9}$ -->
+      <br><br>
+
+<!-- 
+      Password Validation :
+      1. min 8 character : 
+      2. One uppercase :
+      3. One lowercase : 
+      4. Special character : 
+      "?=" -- lookahead
+      "." any number of character 
+      "*" can be repeated any time
+      "
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)([A-Za-z\d]{8,})$"
+  -->
+      <br><br>
+  <label for="pwd">Password1: </label>
+      <input type="text" name="Password" id="pwd" pattern="[A-Za-z\d@$!% *? &#]{8,}">
+      <br><br>
+
+      <label for="pwd1">Password2: </label>
+      <input type="text" name="Password" id="pwd1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*@#$&)([A-Za-z\d]{8,})$"> 
+      <br><br>
+
+
+      <button type="submit">Submit</button>
+      <button type="reset">Cancel</button>
+    </form>
+  </body>
+</html>
