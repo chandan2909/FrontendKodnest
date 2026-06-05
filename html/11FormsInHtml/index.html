@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms In HTML</title>
+    <style>
+      body {
+        background-color: rgb(39, 38, 38);
+        color: rgb(248, 247, 246);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User information</h1>
+    <form>
+      <fieldset>
+        <legend>Basic Inputs</legend>
+        <label for="username">Username:</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          required
+        />
+        <sup><span style="color: red">*</span></sup>
+        <br />
+        <br />
+
+        <label for="pwd">Password: </label>
+        <input
+          id="pwd"
+          type="password"
+          name="password"
+          required
+          placeholder="Enter Password"
+        />
+        <sup><span style="color: red">*</span></sup>
+        <br />
+        <br />
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" />
+        <br />
+        <br />
+        <label for="Mobile">Number: </label>
+        <input type="tel" id="Mobile" name="mobile" />
+        <br />
+        <br />
+
+        <label for="telephone">Telephone: </label>
+        <input type="tel" id="telephone" name="telephone" />
+        <br /><br />
+        <label for="url">URL: </label>
+        <input
+          type="url"
+          placeholder="Enter url"
+          id="url"
+          name="url"
+          title="url"
+        />
+        <br /><br />
+        <label for="search">Search</label>
+        <input type="search" name="search" id="search" />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Date and Time</legend>
+        <label for="joiningdate">Date: </label>
+        <input type="date" id="joiningdate" name="joiningdate" />
+
+        <br /><br />
+        <label for="joiningtime">Time: </label>
+        <input type="time" id="joiningtime" name="joiningtime" />
+
+        <br /><br />
+        <label for="joiningdate">Date and Time: </label>
+        <input
+          type="datetime-local"
+          id="joiningdatetime"
+          name="joiningdatetime"
+          title="datetime-local"
+        />
+        <br /><br />
+        <label for="month">Month:</label>
+        <input type="month" name="month" id="month" />
+        <br /><br />
+        <label for="week">Week</label>
+        <input type="week" name="week" id="week" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Selection Controls</legend>
+
+        <label>
+          Gender: <input type="radio" name="gender" value="male" /> Male
+        </label>
+
+        <label>
+          <input type="radio" name="gender" value="Female" /> Female
+        </label>
+
+        <label>
+          <input type="radio" name="gender" value="Female" /> Other
+        </label>
+
+        <br /><br />
+        <label
+          >Skills: <input type="checkbox" name="html" id="html" />HTML
+        </label>
+
+        <label> <input type="checkbox" name="html" id="css" />CSS </label>
+
+        <label>
+          <input type="checkbox" name="javascript" id="javascript" />Javascript
+        </label>
+        <br /><br />
+        <label for=""
+          >Range:
+          <input type="range" min="1" max="10" />
+        </label>
+        <br /><br />
+        <label for="color">Choose color</label>
+        <input type="color" id="color" />
+      </fieldset>
+
+      <br />
+      <fieldset>
+        <legend>File Upload</legend>
+        <label for="file">Upload file</label>
+        <input id="file" type="file" accept=".pdf, .js" />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Comments</legend>
+
+        <label for="comment">Address: </label>
+        <br />
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Select Options</legend>
+        <label for="country">Country: </label>
+        <select name="country" id="country">
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="cherry">UK</option>
+          <option value="canada">Canada</option>
+        </select>
+        <br /><br />
+        <label for="">Multiple Select:</label>
+        <br />
+        <select name="skill" id="skill" multiple>
+          <option value="html">Python</option>
+          <option value="css">Java</option>
+          <option value="css">C++</option>
+          <option value="js">javaScript</option>
+        </select>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>Datalist Example</legend>
+        <label for="browser">Choose Browser: </label>
+        <input id="browser" list="browsers" />
+        <datalist id="browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Edge"></option>
+          <option value="Safari"></option>
+        </datalist>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Progress & Meter</legend>
+        <label for="Progress">Progress : </label>
+        <progress value="8" max="10"></progress>
+        <br />
+        <label for="meter">Meter : </label>
+        <meter value="8" min="0" max="10" id="meter"></meter>
+      </fieldset>
+      <fieldset>
+        <legend>Output Example</legend>
+        <input type="number" value="10" />
+        &plus;
+        <input type="number" name="" id="" value="20" />
+        &equals; 30
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Buttons</legend>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Click Me</button>
+        <button type="button">Normal Button</button>
+        <button type="button">Submit Button</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+<!-- 
+
+HTML Revision ?
+
+
+
+
+
+1) What is html?
+
+
+
+    - it is HyperText Markup Language
+
+    - it is used to write content and structure of webpage.
+
+
+
+    Q 1.1) What do you mean by Hypertext?
+
+        - hypertext is the text where we can navigate to any 
+
+          other page while clicking on it
+
+
+
+    Q 1.2) What do you mean by Markup Language?
+
+        - A Markup Language is a language that uses tags to describe the structure, 
+
+          formatting, or presentation of data
+
+
+
+
+
+2) What is the purpose of html?
+
+    - content + structure
+
+
+
+
+
+3) What is HTML biolerplate?
+
+    - Basic structure we have to write while creating web-page is HTML Biolerplate.    
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Hello, World!</title>
+
+  </head>
+
+  <body>
+
+    
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+    Q 3.1) What is <!DOCTYPE html> ?
+
+    
+
+           - it tells the browser that the document is written in html 5 version.
+
+    
+
+    Q 3.2) What is attribute?
+
+           - it is extra information which is written in opening tag of an element
+
+             in key value pair.          
+
+
+
+
+
+4) What Tag?
+
+    - it is building block of html.
+
+
+
+    Q 4.1) What are the types of tags?
+
+        - opening tag
+
+        - closing tag
+
+    
+
+
+
+5) What is Element?
+
+    - Opening tag + content + closing tag
+
+
+
+    Q 5.1) What are the types of elements?
+
+        - Block level
+
+        - Inline
+
+        - Inline block
+
+                    they will respect height and width
+
+                    they start on same line
+
+-->
